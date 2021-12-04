@@ -5,10 +5,10 @@
     --fontsize1:1.5rem;
     --fontsize2:1rem;
     --header-color: gray;
-    --header-margin
+    
 }
 
-*, *::before, *::after{
+*{
     margin:0;
     padding: 0;
     box-sizing: border-box;

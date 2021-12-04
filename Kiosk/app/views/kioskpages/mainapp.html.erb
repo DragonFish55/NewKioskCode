@@ -1,6 +1,12 @@
 <html>
     <head>
         <%= stylesheet_link_tag "mainapp.css" %>
+        <%= stylesheet_link_tag "userdetails.css" %>
+        <%= stylesheet_link_tag "userconsent.css" %>
+        <%= stylesheet_link_tag "userhealth.css" %>
+        <%= stylesheet_link_tag "userinsurance.css" %>
+        <%= stylesheet_link_tag "userreview.css" %>
+        <%= stylesheet_link_tag "progressbar.css" %>
         <meta name = "viewport">
     </head>
     <body>
@@ -18,7 +24,13 @@
             <%= render "kioskpages/userdetails" %>
         </section>
         <section class = "userpages" id = userreview""></section>
-        
+
         <%= javascript_link_tag "mainapp.js" %>
+        <%= javascript_link_tag "userdetails.js" %>
+        <%= javascript_link_tag "userconsent.js" %>
+        <%= javascript_link_tag "userhealth.js" %>
+        <%= javascript_link_tag "userinsurance.js" %>
+        <%= javascript_link_tag "userreview.js" %>
+        <%= javascript_link_tag "progressbar.js" %>
     </body>
 </html>
