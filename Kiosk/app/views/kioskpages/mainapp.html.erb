@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <%= stylesheet_link_tag "mainapp.css" %>
+        <meta name = "viewport">
+    </head>
+    <body>
+        <section class = "progressbar"></section>
+        <section class = "userpages" id = "userdetails">
+            <%= render "kioskpages/userdetails" %>
+        </section>
+        <section class = "userpages" id = "userconsent">
+            <%= render "kioskpages/userconsent" %>
+        </section>
+        <section class = "userpages" id = "userhealth">
+            <%= render "kioskpages/userhealth" %>
+        </section>
+        <section class = "userpages" id = "userinsurance">
+            <%= render "kioskpages/userdetails" %>
+        </section>
+        <section class = "userpages" id = userreview""></section>
+        
+        <%= javascript_link_tag "mainapp.js" %>
+    </body>
+</html>
