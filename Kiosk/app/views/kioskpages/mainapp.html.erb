@@ -11,23 +11,44 @@
         <title>Kiosk Checkin</title>
     </head>
     <body>
-    <p>hihihi
+
+        
         <section class = "progressbar"></section>
-        <section class = "userpages" id = "userdetails">
-            <%= render "kioskpages/userdetails" %>
-        </section>
-        <section class = "userpages" id = "userconsent">
-            <%= render "kioskpages/userconsent" %>
-        </section>
-        <section class = "userpages" id = "userhealth">
-            <%= render "kioskpages/userhealth" %>
-        </section>
-        <section class = "userpages" id = "userinsurance">
-            <%= render "kioskpages/userdetails" %>
-        </section>
-        <section class = "userpages" id = "userreview">
-            <%= render "kioskpages/userdetails" %>
-        </section>
+        
+        <% if temp1 == "yes" %>
+            <section class = "userpages" id = "userdetails">
+                <%= render "kioskpages/userdetails" %>
+                
+            </section>
+        <% end %>
+        
+        <% if temp2 == "yes" %>
+            <section class = "userpages" id = "userconsent">
+                <%= render "kioskpages/userconsent" %>
+            </section>
+        <% end %>
+
+        <% if temp3 == "yes" %>
+            <section class = "userpages" id = "userhealth">
+                <%= render "kioskpages/userhealth" %>
+            </section>
+        <% end %>
+
+        <% if temp4 == "yes" %>
+            <section class = "userpages" id = "userinsurance">
+                <%= render "kioskpages/userdetails" %>
+            </section>
+        <% end %>
+
+        <% if temp5 == "yes" %>
+            <section class = "userpages" id = "userreview">
+                <%= render "kioskpages/userdetails" %>
+            </section>
+        <% end %>
+        
+        
+        
+        
 
         <%= javascript_pack_tag "mainapp.js" %>
         <%= javascript_pack_tag "userdetails.js" %>

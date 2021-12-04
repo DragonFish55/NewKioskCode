@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   resources :health_histories
 
-  get '/userdetails', to: "kioskpages#userdetails"
-  get '/userconsent', to: "kioskpages#userconsent"
-  get '/userinsurance', to: "kioskpages#userinsurance"
-  get '/userhealth', to: "kioskpages#userdetails"
-  get '/userreview', to: "kioskpages#userreview"
+  get '/mainapp/:id', to: "kioskpages#mainapp"
   get '/mainapp', to: "kioskpages#mainapp"
   
   get '/signup', to: "kioskpages#signup"

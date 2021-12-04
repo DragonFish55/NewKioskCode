@@ -1,18 +1,19 @@
 class KioskpagesController < ApplicationController
-    def userdetails
-        render :template => 'kioskpages/mainapp'
-    end
-    def userconsent
-    end
-    def userinsurance
-    end
-    def userhealth
-    end
-    def userreview
-    end
-    def userdetails
-    end
     def mainapp
+        @paramIn = params[:id]
+        if(@paramIn == "userdetails")
+            render :template => "kioskpages/mainapp", :locals => {:temp1 => "yes", :temp2 => "no", :temp3 => "no", :temp4 => "no", :temp5 => "no"}
+        elsif(@paramIn == "userconsent")
+            render :template => "kioskpages/mainapp", :locals => {:temp1 => "no", :temp2 => "yes", :temp3 => "no", :temp4 => "no", :temp5 => "no"}
+        elsif(@paramIn == "userinsurance") 
+            render :template => "kioskpages/mainapp", :locals => {:temp1 => "no", :temp2 => "no", :temp3 => "yes", :temp4 => "no", :temp5 => "no"}
+        elsif(@paramIn == "userhealth")
+            render :template => "kioskpages/mainapp", :locals => {:temp1 => "no", :temp2 => "no", :temp3 => "no", :temp4 => "no", :temp5 => "no"}
+        elsif(@paramIn == "userreview")
+            render :template => "kioskpages/mainapp", :locals => {:temp1 => "no", :temp2 => "no", :temp3 => "no", :temp4 => "no", :temp5 => "yes"}
+        else
+            render :template => "kioskpages/mainapp", :locals => {:temp1 => "no", :temp2 => "no", :temp3 => "no", :temp4 => "no", :temp5 => "no"}
+        end
     end
     def signup
     end
