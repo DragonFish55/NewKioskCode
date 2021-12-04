@@ -70,9 +70,7 @@ header{
 }
 
 
-#sign_up_progress{
-    display: none;
-}
+
 
 .section_box.active{
     background-color: blue;

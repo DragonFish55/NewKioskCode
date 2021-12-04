@@ -26,12 +26,3 @@ header{
     background-color: var(--header-color);
 }
 
-
-
-.userpages{
-    display: none;
-}
-
-#signin{
-    display:block;
-}

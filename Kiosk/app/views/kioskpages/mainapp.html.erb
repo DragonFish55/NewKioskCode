@@ -15,37 +15,39 @@
         <header></header>
         
         <section class = "progressbar">
-            <%= render partial: "kioskpages/progressbar", :locals => {:tempIn1 => temp1, :tempIn2 => temp2, :tempIn3 => temp3, :tempIn4 => temp4, :tempIn5 => temp5} %>
+            <%= render partial: "kioskpages/progressbar", :locals => {:progval1 => progval} %>
         </section>
         
-        <% if temp1 == "yes" %>
+        <% if compval[0] == "1" %>
+       
             <section class = "userpages" id = "userdetails">
-                <%= render "kioskpages/userdetails" %>
+                
+                <%= render partial: "kioskpages/userdetails" %>
                 
             </section>
             
         <% end %>
         
-        <% if temp2 == "yes" %>
+        <% if compval[1] == "1" %>
             
             <section class = "userpages" id = "userinsurance">
                 <%= render "kioskpages/userdetails" %>
             </section>
         <% end %>
 
-        <% if temp3 == "yes" %>
+        <% if compval[2] == "1" %>
             <section class = "userpages" id = "userhealth">
                 <%= render "kioskpages/userhealth" %>
             </section>
         <% end %>
 
-        <% if temp4 == "yes" %>
+        <% if compval[3] == "1" %>
             <section class = "userpages" id = "userconsent">
                 <%= render "kioskpages/userconsent" %>
             </section>
         <% end %>
 
-        <% if temp5 == "yes" %>
+        <% if compval[4] == "1" %>
             <section class = "userpages" id = "userreview">
                 <%= render "kioskpages/userreview"%>
             </section>
