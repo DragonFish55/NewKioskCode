@@ -7,9 +7,11 @@
         <%= stylesheet_link_tag "userinsurance.css" %>
         <%= stylesheet_link_tag "userreview.css" %>
         <%= stylesheet_link_tag "progressbar.css" %>
-        <meta name = "viewport">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kiosk Checkin</title>
     </head>
     <body>
+    <p>hihihi
         <section class = "progressbar"></section>
         <section class = "userpages" id = "userdetails">
             <%= render "kioskpages/userdetails" %>
@@ -23,14 +25,16 @@
         <section class = "userpages" id = "userinsurance">
             <%= render "kioskpages/userdetails" %>
         </section>
-        <section class = "userpages" id = userreview""></section>
+        <section class = "userpages" id = "userreview">
+            <%= render "kioskpages/userdetails" %>
+        </section>
 
-        <%= javascript_link_tag "mainapp.js" %>
-        <%= javascript_link_tag "userdetails.js" %>
-        <%= javascript_link_tag "userconsent.js" %>
-        <%= javascript_link_tag "userhealth.js" %>
-        <%= javascript_link_tag "userinsurance.js" %>
-        <%= javascript_link_tag "userreview.js" %>
-        <%= javascript_link_tag "progressbar.js" %>
+        <%= javascript_pack_tag "mainapp.js" %>
+        <%= javascript_pack_tag "userdetails.js" %>
+        <%= javascript_pack_tag "userconsent.js" %>
+        <%= javascript_pack_tag "userhealth.js" %>
+        <%= javascript_pack_tag "userinsurance.js" %>
+        <%= javascript_pack_tag "userreview.js" %>
+        <%= javascript_pack_tag "progressbar.js" %>
     </body>
 </html>

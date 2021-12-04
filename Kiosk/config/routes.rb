@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get '/userinsurance', to: "kioskpages#userinsurance"
   get '/userhealth', to: "kioskpages#userdetails"
   get '/userreview', to: "kioskpages#userreview"
-
+  get '/mainapp', to: "kioskpages#mainapp"
+  
   get '/signup', to: "kioskpages#signup"
   get "/signin", to: "kioskpages#signin"
 
