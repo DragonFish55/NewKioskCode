@@ -1,0 +1,65 @@
+
+        <div class = "progress_bar">
+            <div class = "progress_section"  id = "sign_up_progress">
+                <div class = "section">
+                    <div class = "section_box" id = "insurbox">Personal Info</div>
+                    <div class = "connector"></div>
+                </div>
+                <div class = "section">
+                    <div class = "section_box" id = "healthbox">Insurance</div>
+                    <div class = "connector"></div>
+                </div>
+                <div class = "section">
+                    <div class = "section_box" id = "formsbox">Health History</div>
+                    <div class = "connector"></div>
+                </div>
+                <div class = "section">
+                    <div class = "section_box" id = "formsbox">Consent</div>
+                    <div class = "connector"></div>
+                </div>
+                <div class = "section">
+                    <div class = "section_box" id = "formsbox">Review</div>
+                    
+                </div>
+            </div>
+            <div class = "progress_section" id = "sign_in_progress">
+                
+                <div class = "section">
+                     <% if tempIn1 == "yes" %>
+                        <div class = "section_box active" id = "insurancebox">Insurance</div>
+                     <% else %>
+                        <div class = "section_box" id = "insurancebox">Insurance</div>
+                     <% end %>
+                    <div class = "connector"></div>
+                </div>
+                <div class = "section">
+                     <% if tempIn2 == "yes" %>
+                        <div class = "section_box active" id = "formsbox">Forms</div>
+                     <% else %>
+                        <div class = "section_box" id = "formsbox">Forms</div>
+                     <% end %>
+                    <div class = "connector"></div>
+                     
+                </div>
+                <div class = "section">
+                     <% if tempIn3 == "yes" %>
+                        <div class = "section_box active" id = "consentbox">Consent</div>
+                     <% else %>
+                        <div class = "section_box" id = "consentbox">Consent</div>
+                     <% end %>
+                    <div class = "connector"></div>
+                </div>
+                <div class = "section">
+                    <% if tempIn4 == "yes" %>
+                        <div class = "section_box active" id = "reviewbox">Review</div>
+                    <% else %>
+                        <div class = "section_box" id = "reviewbox">Review</div>
+                    <% end %>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+

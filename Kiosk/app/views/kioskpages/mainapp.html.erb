@@ -12,8 +12,11 @@
     </head>
     <body>
 
+        <header></header>
         
-        <section class = "progressbar"></section>
+        <section class = "progressbar">
+            <%= render partial: "kioskpages/progressbar", :locals => {:tempIn1 => temp1, :tempIn2 => temp2, :tempIn3 => temp3, :tempIn4 => temp4, :tempIn5 => temp5} %>
+        </section>
         
         <% if temp1 == "yes" %>
             <section class = "userpages" id = "userdetails">
@@ -42,7 +45,7 @@
 
         <% if temp5 == "yes" %>
             <section class = "userpages" id = "userreview">
-                <%= render "kioskpages/userdetails" %>
+                <%= render "kioskpages/userreview"%>
             </section>
         <% end %>
         
