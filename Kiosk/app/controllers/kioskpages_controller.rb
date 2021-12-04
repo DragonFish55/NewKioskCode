@@ -1,0 +1,2 @@
+class KioskpagesController < ApplicationController
+end
