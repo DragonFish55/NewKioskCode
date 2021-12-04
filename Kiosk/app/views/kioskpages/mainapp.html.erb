@@ -23,11 +23,13 @@
                 <%= render "kioskpages/userdetails" %>
                 
             </section>
+            
         <% end %>
         
         <% if temp2 == "yes" %>
-            <section class = "userpages" id = "userconsent">
-                <%= render "kioskpages/userconsent" %>
+            
+            <section class = "userpages" id = "userinsurance">
+                <%= render "kioskpages/userdetails" %>
             </section>
         <% end %>
 
@@ -38,8 +40,8 @@
         <% end %>
 
         <% if temp4 == "yes" %>
-            <section class = "userpages" id = "userinsurance">
-                <%= render "kioskpages/userdetails" %>
+            <section class = "userpages" id = "userconsent">
+                <%= render "kioskpages/userconsent" %>
             </section>
         <% end %>
 
