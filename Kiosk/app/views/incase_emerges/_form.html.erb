@@ -1,0 +1,22 @@
+<%= form_with(model: incase_emerge) do |form| %>
+  <% if incase_emerge.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(incase_emerge.errors.count, "error") %> prohibited this incase_emerge from being saved:</h2>
+
+      <ul>
+        <% incase_emerge.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

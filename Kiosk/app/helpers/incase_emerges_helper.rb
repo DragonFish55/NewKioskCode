@@ -1,0 +1,2 @@
+module IncaseEmergesHelper
+end

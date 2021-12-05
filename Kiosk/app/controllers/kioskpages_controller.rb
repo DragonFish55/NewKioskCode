@@ -18,8 +18,10 @@ class KioskpagesController < ApplicationController
     def signup
     end
     def signin
+        #redirect_to "https://patient-login.herokuapp.com/sign_in"
     end
     def login
+        
     end
     def logout
     end

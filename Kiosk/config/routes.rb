@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  resources :demographics
+  resources :incase_emerges
+  resources :insurances
+  resources :users
   resources :health_histories
 
+  get '/', to: "kioskpages#signin"
   get '/mainapp/:id', to: "kioskpages#mainapp"
   get '/mainapp', to: "kioskpages#mainapp"
   

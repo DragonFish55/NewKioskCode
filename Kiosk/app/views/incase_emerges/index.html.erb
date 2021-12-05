@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Incase Emerges</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @incase_emerges.each do |incase_emerge| %>
+      <tr>
+        <td><%= incase_emerge.user_id %></td>
+        <td><%= link_to 'Show', incase_emerge %></td>
+        <td><%= link_to 'Edit', edit_incase_emerge_path(incase_emerge) %></td>
+        <td><%= link_to 'Destroy', incase_emerge, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Incase Emerge', new_incase_emerge_path %>
