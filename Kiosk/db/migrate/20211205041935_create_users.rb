@@ -14,6 +14,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.integer :phone_no
       t.string :user_type
       t.boolean :login
+      t.string :session
 
       t.timestamps
     end

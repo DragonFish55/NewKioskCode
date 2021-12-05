@@ -128,6 +128,7 @@ ActiveRecord::Schema.define(version: 2021_12_05_043730) do
     t.integer "phone_no"
     t.string "user_type"
     t.boolean "login"
+    t.string "session"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

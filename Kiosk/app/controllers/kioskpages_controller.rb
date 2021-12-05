@@ -15,14 +15,5 @@ class KioskpagesController < ApplicationController
             render :template => "kioskpages/mainapp", :locals => {:compval => "00000", :progval => "00000"}
         end
     end
-    def signup
-    end
-    def signin
-        #redirect_to "https://patient-login.herokuapp.com/sign_in"
-    end
-    def login
-        
-    end
-    def logout
-    end
+    
 end
