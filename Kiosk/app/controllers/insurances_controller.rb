@@ -1,6 +1,16 @@
 class InsurancesController < ApplicationController
   before_action :set_insurance, only: %i[ show edit update destroy ]
 
+
+  def get_insurancedetails
+  end
+
+  def up_insurancedetails
+  end
+
+  
+
+
   # GET /insurances or /insurances.json
   def index
     @insurances = Insurance.all

@@ -1,6 +1,19 @@
 class DemographicsController < ApplicationController
   before_action :set_demographic, only: %i[ show edit update destroy ]
 
+
+  def get_demographicdetails
+  end
+
+  def up_demographicdetails
+  end
+
+  def get_bluebuttondetails
+  end
+
+  def up_bluebuttondetails
+  end
+
   # GET /demographics or /demographics.json
   def index
     @demographics = Demographic.all

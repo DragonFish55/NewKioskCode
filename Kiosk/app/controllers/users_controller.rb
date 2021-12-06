@@ -1,6 +1,48 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
+  def authenticate
+    
+  end
+
+  def get_personaldetails
+    
+  end
+
+  def up_personaldetails
+  end
+
+  def get_user
+    
+  end
+
+  def createuser
+
+    data = request.raw_post
+    #users = User.new(email:data.email)
+    puts data
+    render json: data, status: :ok
+  end
+
+  def update_user
+  end
+
+  def delete_user
+  end
+
+  def signup
+  end
+  def signin
+      #redirect_to "https://patient-login.herokuapp.com/sign_in"
+  end
+  def login
+      
+  end
+  def logout
+  end
+
+
+
   # GET /users or /users.json
   def index
     @users = User.all
