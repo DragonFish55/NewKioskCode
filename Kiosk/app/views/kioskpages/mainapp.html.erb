@@ -12,46 +12,74 @@
     </head>
     <body>
 
-        <header></header>
+        <header><p>nj</p></header>
         
-        <section class = "progressbar">
+        <section class = "progressbar_main">
             <%= render partial: "kioskpages/progressbar", :locals => {:progval1 => progval} %>
         </section>
-        
-        <% if compval[0] == "1" %>
-       
-            <section class = "userpages" id = "userdetails">
-                
-                <%= render partial: "kioskpages/userdetails" %>
-                
-            </section>
+        <section class = "mainpage_top">
+            <% if compval[0] == "1" %>
+                <section class = "userpages" id = "userdetails">
+                    <%= render partial: "kioskpages/userdetails" %>
+                </section>
+            <% else %>
+                <section class = "userpages abs" id = "userdetails">
+                    <%= render partial: "kioskpages/userdetails" %>
+                </section>
+            <% end %>
             
-        <% end %>
+            <% if compval[1] == "1" %>
+                <section class = "userpages" id = "userinsurance">
+                    <%= render partial: "kioskpages/userinsurance" %>
+                </section>
+            <% else %>
+                <section class = "userpages abs" id = "userinsurance">
+                    <%= render partial: "kioskpages/userinsurance" %>
+                </section>
+            <% end %>
+
+            <% if compval[2] == "1" %>
+                <section class = "userpages" id = "userhealth">
+                    <%= render partial: "kioskpages/userhealth" %>
+                </section>
+            <% else %>
+                <section class = "userpages abs" id = "userhealth">
+                    <%= render partial: "kioskpages/userhealth" %>
+                </section>
+            <% end %>
+
+            <% if compval[3] == "1" %>
+                <section class = "userpages" id = "userconsent">
+                    <%= render partial: "kioskpages/userconsent" %>
+                </section>
+            <% else %>
+                <section class = "userpages abs" id = "userconsent">
+                    <%= render partial: "kioskpages/userconsent" %>
+                </section>
+            <% end %>
+
+            <% if compval[4] == "1" %>
+                <section class = "userpages" id = "userreview">
+                    <%= render "kioskpages/userreview"%>
+                </section>
+            <% else %>
+                <section class = "userpages abs" id = "userreview">
+                    <%= render "kioskpages/userreview"%>
+                </section>
+            <% end %>
+        </section>
+        <section class = "progressbtns">
+            <% if compval[4] != "1" %>
+                <div class = "nextbtn">
+                    <button>Next</button>
+                </div>
+            <% else %>
+                <div class = "submitbtn">
+                    <button>Submit</button>
+                </div>
+            <% end %>
+        </section>
         
-        <% if compval[1] == "1" %>
-            
-            <section class = "userpages" id = "userinsurance">
-                <%= render "kioskpages/userdetails" %>
-            </section>
-        <% end %>
-
-        <% if compval[2] == "1" %>
-            <section class = "userpages" id = "userhealth">
-                <%= render "kioskpages/userhealth" %>
-            </section>
-        <% end %>
-
-        <% if compval[3] == "1" %>
-            <section class = "userpages" id = "userconsent">
-                <%= render "kioskpages/userconsent" %>
-            </section>
-        <% end %>
-
-        <% if compval[4] == "1" %>
-            <section class = "userpages" id = "userreview">
-                <%= render "kioskpages/userreview"%>
-            </section>
-        <% end %>
         
         
         
