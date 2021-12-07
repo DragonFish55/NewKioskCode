@@ -10,17 +10,28 @@ class UsersController < ApplicationController
   end
 
   def up_personaldetails
+    user = User.find_by(user_id: params[:userid])
+    user.update()
   end
 
   def get_user
+    user = params[:id]
+    if(user.user_type == "Patient")
+      user1 = User.where(user_id: params[:userid])
+      render json: user, status: :ok
+    else
+      if(user.user_type == "")
+    end
+
+    
     
   end
 
   def createuser
 
     data = {"hi":"there"}
-    #users = User.new(email:data.email)
-    puts data
+    #users = User.new(email:"hello")
+    #puts data
     render json: data, status: :ok
   end
 
