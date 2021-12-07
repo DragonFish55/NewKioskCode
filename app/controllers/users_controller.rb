@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def createuser
 
-    data = request.raw_post
+    data = {"hi":"there"}
     #users = User.new(email:data.email)
     puts data
     render json: data, status: :ok

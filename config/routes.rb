@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   
   delete "Intake/:patientid", to: "users#del_patient"
   get "user/:userid/usertype", to: "users#get_user"
-  post "user/create", to: "users#createuser"
+  get "user/create", to: "users#createuser"
   put "user/:userid/update", to: "users#update_user" 
   delete "user/:userid/delete", to: "users#delete_user" 
 
