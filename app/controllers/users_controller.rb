@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   def up_personaldetails
     user = User.find_by(user_id: params[:userid])
-    user.update()
+    #user.update()
   end
 
   def get_user
@@ -19,8 +19,8 @@ class UsersController < ApplicationController
     if(user.user_type == "Patient")
       user1 = User.where(user_id: params[:userid])
       render json: user, status: :ok
-    else
-      if(user.user_type == "")
+    #else
+      #if(user.user_type == "")
     end
 
     
