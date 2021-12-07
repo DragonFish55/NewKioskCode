@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
-  def authenticate
-    
-  end
-
   def get_personaldetails
     
   end
@@ -42,17 +38,38 @@ class UsersController < ApplicationController
   end
 
   def signup
+    redirect_to "https://patient-login.herokuapp.com/sign_up"
   end
 
   def signin
-      #redirect_to "https://patient-login.herokuapp.com/sign_in"
+    redirect_to "https://patient-login.herokuapp.com/sign_in"
   end
+
+  end
+
   def login
+    data = request.data
+    n = loginchk(data)
+    if(params[:type] == "kiosk")
+      render :template => "kioskpages/userdetails", :locals => {:compval => "00000", :progval => "00000"}
+    else
+      redirect_to "https://patient-login.herokuapp.com/sign_in"
+    end
       
+    
   end
   def logout
   end
 
+  def authenticate
+    
+  end
+
+  def loginchk
+    
+    authenticate(data)
+
+  end
 
 
   # GET /users or /users.json

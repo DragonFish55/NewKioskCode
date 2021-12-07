@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/userinsurance', to: 'kioskpages#userinsurance'
   get '/userconsent', to: 'kioskpages#userconsent'
   get '/userhealth', to: 'kioskpages#userhealth'
-  get '/userreview', to: 'kioskpages#userreview'
+  #get '/userreview', to: 'kioskpages#userreview'
 
   get "/Intake/:id/personalDetails", to: "users#get_personaldetails"
   get "/Intake/:patientid/insuranceDetails", to: "insurances#get_insurancedetails"
@@ -31,11 +31,15 @@ Rails.application.routes.draw do
   put "user/:userid/update", to: "users#update_user" 
   delete "user/:userid/delete", to: "users#delete_user" 
 
-  get '/signup', to: "users#signup"
+  get '/signup', to: "users#userdetails"
   get "/signin", to: "users#signin"
 
-  post '/login', to: "users#login"
-  delete '/login', to: "users#logout"
+  get '/submitsignup', to: "users#signin"
+  get '/submitsignin', to: "users#signin"
+
+
+  post '/:type/login', to: "users#login"
+  delete '/logout', to: "users#logout"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
