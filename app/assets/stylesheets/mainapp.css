@@ -30,9 +30,7 @@ header{
     visibility: hidden;
 }
 
-.userpages{
-    height: 100%;
-}
+
 
 .progressbar_main{
     height: 10%;
@@ -45,6 +43,7 @@ header{
     width: 100%;
     height: 70%;
     padding: 0 var(--margin-horiz-main);
+    background-color: red;
     
 }
 
@@ -52,13 +51,14 @@ header{
     width: 100%;
     height: 10%;
     padding: 0 var(--margin-horiz-main);
-    
+    background-color: yellow;
     
 }
 
 .nextbtn{
     height: 100%;
     width: 100%;
+    background-color: blue;
     display: flex;
     align-items: center;
     justify-content: center;

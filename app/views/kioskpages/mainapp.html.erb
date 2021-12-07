@@ -8,6 +8,7 @@
         <%= stylesheet_link_tag "userreview.css" %>
         <%= stylesheet_link_tag "progressbar.css" %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <%= csrf_meta_tag %>
         <title>Kiosk Checkin</title>
     </head>
     <body>
@@ -74,7 +75,7 @@
                     <button>Next</button>
                 </div>
             <% else %>
-                <div class = "submitbtn">
+                <div class = "nextbtn">
                     <button>Submit</button>
                 </div>
             <% end %>
