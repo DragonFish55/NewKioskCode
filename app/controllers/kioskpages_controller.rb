@@ -1,6 +1,6 @@
 class KioskpagesController < ApplicationController
     def mainapp
-        @paramIn = params[:id]
+       @paramIn = params[:id]
         if(@paramIn == "userdetails")
             render :template => "kioskpages/mainapp", :locals => {:compval => "10000", :progval => "10000"}
         elsif(@paramIn == "userinsurance")
@@ -13,7 +13,18 @@ class KioskpagesController < ApplicationController
             render :template => "kioskpages/mainapp", :locals => {:compval => "00001", :progval => "11111"}
         else
             render :template => "kioskpages/mainapp", :locals => {:compval => "00000", :progval => "00000"}
-        end
+        end 
+    end
+
+    def userdetails
+    end
+    def userinsurance
+    end
+    def userconsent
+    end
+    def userhealth
+    end
+    def userreview
     end
     
 end
