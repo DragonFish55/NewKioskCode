@@ -15,16 +15,8 @@ next.addEventListener('click', nextpage);
 back.addEventListener('click', prevPage);
 
 prevPage = () => {
-    fetch('/userdetails',{
-        method:"GET",
-        mode:"cors",
-        cache:"no-cache",
-        body:JSON.stringify({})
-    })
-    .then(responseIn => responseIn.text())
-    .then(dataIn => console.log(dataIn))
-    .catch(err => console.log(err))
-
+    
+    location.href = "/userdetails"
     back.removeEventListener('click', prevPage);
     next.removeEventListener('click', nextpage);
 }
@@ -41,15 +33,7 @@ nextPage = () => {
         priority: priority
     }
 
-    fetch('/userhealth',{
-        method:"GET",
-        mode:"cors",
-        cache:"no-cache",
-        body:JSON.stringify({})
-    })
-    .then(responseIn => responseIn.text())
-    .then(dataIn => console.log(dataIn))
-    .catch(err => console.log(err))
+    
 
     fetch('/insurances/up_userinsurance',{
         method:"POST",
@@ -60,6 +44,8 @@ nextPage = () => {
     .then(responseIn => responseIn.text())
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
+
+    location.href = "/userhealth"
 
     back.removeEventListener('click', prevPage);
     next.removeEventListener('click', nextpage);

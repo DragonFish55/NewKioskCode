@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   end
 
   def signup
-    redirect_to "https://patient-login.herokuapp.com/sign_up"
+    
   end
 
   def signin
@@ -48,16 +48,11 @@ class UsersController < ApplicationController
   end
 
   def login
-    data = request.data
-    n = loginchk(data)
-    if(params[:type] == "kiosk")
-      render :template => "kioskpages/userdetails", :locals => {:compval => "00000", :progval => "00000"}
-    else
-      redirect_to "https://patient-login.herokuapp.com/sign_in"
-    end
+    
       
     
   end
+
   def logout
   end
 
@@ -67,7 +62,7 @@ class UsersController < ApplicationController
 
   def loginchk
     
-    authenticate(data)
+    
 
   end
 

@@ -1,4 +1,5 @@
 nextbtn = document.getElementById("next")
+back = document.getElementById("back")
 
 fname = document.getElementById('fname')
 lname = document.getElementById('lname')
@@ -9,8 +10,10 @@ zip = document.getElementById('zip')
 dob = document.getElementById('dob')
 phone = document.getElementById('phone')
 
+goBack = () => {
+    location.href = "/signin"
+}
 
-nextbtn.addEventListener('click', submitInfo);
 
 submitInfo = () => {
     let data = {
@@ -24,7 +27,7 @@ submitInfo = () => {
         phone:phone.value,
         usetype:"Patient"
     } 
-    
+    /*
     fetch('/users/up_personaldetails',{
         method:"POST",
         mode:"cors",
@@ -34,17 +37,13 @@ submitInfo = () => {
     .then(responseIn => responseIn.text())
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
+*/
+    location.href = "/userinsurance"
+    
 
-    fetch('/userinsurance',{
-        method:"GET",
-        mode:"cors",
-        cache:"no-cache",
-        body:JSON.stringify({})
-    })
-    .then(responseIn => responseIn.text())
-    .then(dataIn => console.log(dataIn))
-    .catch(err => console.log(err))
-
-    nextbtn.removeEventListener(click, submitInfo);
+    nextbtn.removeEventListener('click', submitInfo);
+    back.removeEventListener('click', goBack);
 }
 
+nextbtn.addEventListener('click', submitInfo);
+back.addEventListener('click', goBack);
